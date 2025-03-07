@@ -20,7 +20,7 @@ const TopDestinations = () => {
 
       <div className="grid lg:grid-cols-4 grid-cols-2 gap-4">
         {topDestinationData.map((item, i) => (
-          <TopDestinationCard {...item} />
+          <TopDestinationCard key={i} {...item} />
         ))}
       </div>
     </section>

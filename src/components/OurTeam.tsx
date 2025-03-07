@@ -4,7 +4,7 @@ import OurTeamCard from "./OurTeamCard";
 
 const OurTeam = () => {
   return (
-    <div className="wrapper my-[6rem]">
+    <section id="ourTeam" className="wrapper my-[6rem]">
       <div className="flex flex-col items-center text-center leading-tight">
         <p className="title">our team</p>
         <h1 className="lg:w-[35rem]">
@@ -14,10 +14,10 @@ const OurTeam = () => {
 
       <div className="flex flex-col lg:flex-row justify-between lg:gap-6 gap-36 mt-[14rem]">
         {outTeamData.flatMap((item, i) => (
-          <OurTeamCard {...item} />
+          <OurTeamCard key={i} {...item} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
