@@ -27,7 +27,7 @@
 
 @layer base {
   h1 {
-    @apply text-[30px] lg:text-[48px] text-primary-foreground font-bold;
+    @apply text-[30px] lg:text-[48px] text-primary-foreground font-bold leading-tight;
   }
 }
 

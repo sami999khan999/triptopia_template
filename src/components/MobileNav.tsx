@@ -13,7 +13,7 @@ import { Menu, ChevronDown } from "lucide-react";
 
 const MobileNav = () => {
   return (
-    <nav className="lg:hidden sticky top-0">
+    <nav className="lg:hidden sticky top-0 z-50">
       <div className="h-16 bg-gray-100/50 flex justify-between items-center px-4 backdrop-blur-md">
         <Logo />
         <Sheet>

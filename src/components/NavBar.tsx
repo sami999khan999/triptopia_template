@@ -21,7 +21,7 @@ const NavBar = () => {
               <DropdownMenu key={navItem.name}>
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" className="hover:bg-gray-100">
-                    {navItem.name} <ChevronDown />{" "}
+                    {navItem.name} <ChevronDown />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent

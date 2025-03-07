@@ -3,7 +3,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import React from "react";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 cursor-pointer rounded-md duration-100 hover",
+  "inline-flex items-center justify-center gap-2 cursor-pointer rounded-md duration-100 hover ",
   {
     variants: {
       variant: {
@@ -18,7 +18,7 @@ const buttonVariants = cva(
         default: "px-6 py-3",
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "px-7 py-7",
-        icon: "h-5 w-5",
+        icon: "p-2",
       },
     },
     compoundVariants: [
