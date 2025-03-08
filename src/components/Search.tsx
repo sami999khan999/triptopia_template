@@ -21,6 +21,12 @@ interface SearchParamsType {
   guests: string;
 }
 
+const commonTriggerClasses =
+  "w-[10rem] border-none text-black outline-none text-base font-medium shadow-none hover:bg-background duration-200 cursor-pointer";
+const commonContentClasses =
+  "bg-foreground/90 rounded-none border-y-2 border-4 border-primary-foreground/40";
+const commonItemClasses = "text-xl font-medium hover:bg-background";
+
 const Search = () => {
   const [searchParams, setSearchParams] = useState<SearchParamsType>({
     searchType: searchParamsData.searchType[0],
@@ -36,7 +42,7 @@ const Search = () => {
 
   return (
     <div className="bg-background lg:p-8 px-3 py-6 rounded-xl space-y-6 lg:w-[35rem]">
-      <div className="flex justify-center  max-w-fit flex-wrap">
+      <div className="flex justify-center max-w-fit flex-wrap">
         {searchParamsData.searchType.map((type, i) => (
           <div
             key={i}
@@ -60,7 +66,7 @@ const Search = () => {
         <div className="flex flex-col xl:flex-row gap-4">
           <div>
             <p className="text-muted-foreground">Location</p>
-            <div className="flex items-center ">
+            <div className="flex items-center">
               <MapPin className="text-muted-foreground" />
               <Select
                 onValueChange={(value) =>
@@ -68,15 +74,15 @@ const Search = () => {
                 }
                 value={searchParams.location}
               >
-                <SelectTrigger className="w-[10rem] border-none text-muted outline-none text-base font-medium shadow-none hover:bg-background duration-200 cursor-pointer">
+                <SelectTrigger className={commonTriggerClasses}>
                   <SelectValue placeholder="Select a location" />
                 </SelectTrigger>
-                <SelectContent className="bg-background border-muted-foreground ">
+                <SelectContent className={commonContentClasses}>
                   {searchParamsData.location.map((city, i) => (
                     <SelectItem
                       key={i}
                       value={city}
-                      className="text-lg hover:bg-foreground"
+                      className={commonItemClasses}
                     >
                       {city}
                     </SelectItem>
@@ -91,7 +97,7 @@ const Search = () => {
           {/* Check-In Date Select */}
           <div>
             <p className="text-muted-foreground">Check In</p>
-            <div className="flex items-center ">
+            <div className="flex items-center">
               <MapPin className="text-muted-foreground" />
               <Select
                 onValueChange={(value) =>
@@ -99,19 +105,15 @@ const Search = () => {
                 }
                 value={searchParams.checkIn}
               >
-                <SelectTrigger
-                  duration-200
-                  cursor-pointer
-                  className="w-[10rem] border-none text-muted outline-none text-base font-medium shadow-none hover:bg-background duration-200 cursor-pointer"
-                >
+                <SelectTrigger className={commonTriggerClasses}>
                   <SelectValue placeholder="Select a location" />
                 </SelectTrigger>
-                <SelectContent className="bg-background border-muted-foreground ">
+                <SelectContent className={commonContentClasses}>
                   {searchParamsData.checkIn.map((city, i) => (
                     <SelectItem
                       key={i}
                       value={city}
-                      className="text-lg hover:bg-foreground"
+                      className={commonItemClasses}
                     >
                       {city}
                     </SelectItem>
@@ -122,11 +124,11 @@ const Search = () => {
           </div>
         </div>
 
-        {/* Check-Out Date Select */}
+        {/* Check-Out Date and Guests Select */}
         <div className="flex flex-col xl:flex-row gap-4">
           <div>
             <p className="text-muted-foreground">Check Out</p>
-            <div className="flex items-center ">
+            <div className="flex items-center">
               <MapPin className="text-muted-foreground" />
               <Select
                 onValueChange={(value) =>
@@ -134,15 +136,15 @@ const Search = () => {
                 }
                 value={searchParams.checkOut}
               >
-                <SelectTrigger className="w-[10rem] border-none text-muted outline-none text-base font-medium shadow-none hover:bg-background duration-200 cursor-pointer">
+                <SelectTrigger className={commonTriggerClasses}>
                   <SelectValue placeholder="Select a location" />
                 </SelectTrigger>
-                <SelectContent className="bg-background border-muted-foreground ">
+                <SelectContent className={commonContentClasses}>
                   {searchParamsData.checkOut.map((city, i) => (
                     <SelectItem
                       key={i}
                       value={city}
-                      className="text-lg hover:bg-foreground"
+                      className={commonItemClasses}
                     >
                       {city}
                     </SelectItem>
@@ -154,7 +156,6 @@ const Search = () => {
 
           <div className="border border-gray-200"></div>
 
-          {/* Check-In Date Select */}
           <div>
             <p className="text-muted-foreground">Guests</p>
             <div className="flex items-center">
@@ -165,15 +166,15 @@ const Search = () => {
                 }
                 value={searchParams.guests}
               >
-                <SelectTrigger className="w-[10rem] border-none text-muted outline-none text-base font-medium shadow-none hover:bg-background duration-200 cursor-pointer">
+                <SelectTrigger className={commonTriggerClasses}>
                   <SelectValue placeholder="Select a location" />
                 </SelectTrigger>
-                <SelectContent className="bg-background border-muted-foreground ">
+                <SelectContent className={commonContentClasses}>
                   {searchParamsData.guests.map((city, i) => (
                     <SelectItem
                       key={i}
                       value={city}
-                      className="text-lg hover:bg-foreground"
+                      className={commonItemClasses}
                     >
                       {city}
                     </SelectItem>
@@ -192,7 +193,7 @@ const Search = () => {
         >
           <SearchCheck /> Search
         </Button>
-        <Button variant="link" className="text-muted-foreground ">
+        <Button variant="link" className="text-muted-foreground">
           <Link href={"/"} className="flex gap-1 items-center justify-center">
             <User /> Need Some Help?
           </Link>
