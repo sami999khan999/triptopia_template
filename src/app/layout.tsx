@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import MobileNav from "@/components/MobileNav";
+import Footer from "@/components/Footer";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -25,6 +26,7 @@ export default function RootLayout({
         <NavBar />
         <MobileNav />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -357,3 +357,98 @@ export const trendingDestinations = [
     image: "/trending-destination.png",
   },
 ];
+
+export const testimonialData = [
+  {
+    name: "Berk Arisoy",
+    position: "Product Designer",
+    testimonial:
+      "I can't thank Triptopia enough for helping me find love! Initially, I was hesitant about online dating, but this platform changed my perspective entirely. The user-friendly interface, personalized matches, and the welcoming community made me feel at ease from the very beginning.",
+    image: "/testimonial.png",
+  },
+  {
+    name: "Emma Collins",
+    position: "Marketing Specialist",
+    testimonial:
+      "Triptopia made dating so much easier! The matchmaking algorithm is spot on, and I met someone who shares my interests and values. Highly recommend it for anyone looking for meaningful connections.",
+    image: "/testimonial.png",
+  },
+  {
+    name: "David Lee",
+    position: "Software Engineer",
+    testimonial:
+      "I've tried multiple dating platforms, but Triptopia stands out. The profiles are genuine, and the app's design makes conversations flow naturally. I met my partner here, and we couldn’t be happier!",
+    image: "/testimonial.png",
+  },
+  {
+    name: "Sophia Martinez",
+    position: "Entrepreneur",
+    testimonial:
+      "At first, I was skeptical about online dating, but Triptopia's community is different. It feels safe, and the support team is always helpful. I found love, and I’m forever grateful!",
+    image: "/testimonial.png",
+  },
+  {
+    name: "James Anderson",
+    position: "Photographer",
+    testimonial:
+      "Triptopia is a game-changer! The detailed profiles and compatibility insights helped me connect with someone truly special. It’s not just another dating app; it’s an experience worth trying.",
+    image: "/testimonial.png",
+  },
+];
+
+export const faqData = [
+  {
+    id: 1,
+    question: "What destinations do you offer tours to?",
+    answer:
+      "We offer tours to a variety of destinations worldwide, including Europe, Asia, North America, and exotic locations like the Maldives and Bali.",
+  },
+  {
+    id: 2,
+    question: "What types of service do you provide?",
+    answer:
+      "Triptopia provides travel planning, guided tours, custom vacation packages, hotel bookings, and transportation arrangements.",
+  },
+  {
+    id: 3,
+    question: "What is included in the tour package?",
+    answer:
+      "Our tour packages typically include accommodation, transportation, guided tours, and some meals. Specific inclusions may vary based on the package selected.",
+  },
+  {
+    id: 4,
+    question: "What should I pack for my trip?",
+    answer:
+      "It depends on the destination and season. We recommend packing comfortable clothing, travel essentials, necessary documents, and any specific items needed for activities like hiking or beach trips.",
+  },
+];
+
+export const blogFeedData = [
+  {
+    id: 1,
+    title: "Tracing Ancient Ruins and Roman Relics",
+    type: "Solo Travel",
+    date: "03 Aug",
+    author: "Robert Fox",
+    image: "/blog-feed.png",
+    authorImage: "/blog-author.png",
+  },
+  {
+    id: 2,
+    title: "Honoring History in the Land of Heroes",
+    type: "Cody Fisher",
+    date: "03 Aug",
+    author: "Cody Fisher",
+    image: "/blog-feed.png",
+    authorImage: "/blog-author.png",
+  },
+  {
+    id: 3,
+    title: "Witnessing Sunrise Amongst the Statues",
+    type: "Group Tour",
+    date: "03 Aug",
+    author: "Jerome Bell",
+    image: "/blog-feed.png",
+    authorImage: "/blog-author.png",
+  },
+];

@@ -39,12 +39,10 @@ const PopularTour = () => {
       </div>
 
       {/* Grid layout for 3 cards per row */}
-      <div className="flex items-center justify-center w-full">
-        <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
-          {popularTourData.map((item, i) => (
-            <PopularTourCard key={i} {...item} />
-          ))}
-        </div>
+      <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+        {popularTourData.map((item, i) => (
+          <PopularTourCard key={i} {...item} />
+        ))}
       </div>
     </section>
   );
@@ -64,14 +62,12 @@ interface PopularTourDataType {
 const PopularTourCard = (props: PopularTourDataType) => {
   return (
     <div className="w-full border border-gray-300 overflow-hidden rounded-xl">
-      {/* Tour Image */}
-      <div className="max-w-[414px] h-[220px] overflow-hidden relative">
+      <div className="h-[257px] relative">
         <Image
           src={props.image}
-          width={414}
-          height={257}
+          layout="fill"
+          objectFit="cover"
           alt={props.title}
-          className="rounded-lg object-center object-cover"
         />
         <Button
           className="absolute top-4 right-4 z-30 rounded-full text-muted 
@@ -80,10 +76,9 @@ const PopularTourCard = (props: PopularTourDataType) => {
         >
           <Heart size={15} />
         </Button>
-        hfie
       </div>
 
-      <div className="text-primary-foreground lg:p-8 p-4 max-w-[414px] h-fit">
+      <div className="text-primary-foreground lg:p-8 p-4 h-fit">
         <div className="space-y-3">
           <div className="flex gap-1 items-center">
             <MapPin size={20} className="text-primary" fill="currentColor" />
