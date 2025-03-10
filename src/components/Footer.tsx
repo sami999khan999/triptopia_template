@@ -17,9 +17,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="lg:mt-[10rem] ">
+    <div>
       {/* Offer Section */}
-      <div className="bg-secondary wrapper lg:px-12 mx-4 lg:mx-auto py-8 lg:py-0 rounded-3xl relative top-[9rem] lg:top-[7rem]">
+      <div className="bg-secondary wrapper mx-4 lg:mx-auto py-8 lg:py-0 rounded-3xl relative top-[9rem] lg:top-[7rem]">
         <div className="relative h-[241px]">
           <Image
             src={"/footer-img.png"}
@@ -27,7 +27,7 @@ const Footer = () => {
             layout="fill"
             alt="Footer Image"
           />
-          <div className="relative flex flex-col md:flex-row items-center justify-between h-full lg:px-6 md:px-24 text-foreground gap-8 md:gap-20 z-40">
+          <div className="relative flex flex-col md:flex-row items-center justify-between h-full 2xl:px-14 text-foreground gap-8 md:gap-20 z-40">
             <div className="space-y-4 w-full">
               <p className="text-3xl md:text-5xl font-semibold text-center lg:text-left">
                 Get our pro offers
@@ -93,11 +93,19 @@ revolutionizing`}
             <h2 className="text-2xl text-primary-foreground font-bold tracking-wide">
               About
             </h2>
-            <div className="text-[16px] flex flex-col items-center lg:items-start text-primary-foreground tracking-wide space-y-3 font-medium mt-4 cursor-pointer">
-              <Button variant={"link"}>About Us</Button>
-              <Button variant={"link"}>Our Services</Button>
-              <Button variant={"link"}>Privacy Policy</Button>
-              <Button variant={"link"}>Terms & Conditions</Button>
+            <div className="text-[16px] flex flex-col items-center lg:items-start text-primary-foreground tracking-wide space-y-3 font-medium mt-4 cursor-pointer ">
+              <Button variant={"link"} className="line-clamp-1">
+                About Us
+              </Button>
+              <Button variant={"link"} className="line-clamp-1">
+                Our Services
+              </Button>
+              <Button variant={"link"} className="line-clamp-1">
+                Privacy Policy
+              </Button>
+              <Button variant={"link"} className="line-clamp-1">
+                Terms & Conditions
+              </Button>
             </div>
           </div>
 

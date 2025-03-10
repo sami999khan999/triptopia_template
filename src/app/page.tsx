@@ -12,7 +12,7 @@ import TopDestinations from "@/components/TopDestinations";
 import TopHotspsts from "@/components/TopHotspsts";
 import TrendingDestinations from "@/components/TrendingDestinations";
 
-const page = () => {
+const Page = () => {
   return (
     <div className="">
       <Hero />
@@ -30,4 +30,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
