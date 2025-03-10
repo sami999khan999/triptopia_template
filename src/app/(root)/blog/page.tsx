@@ -1,7 +1,7 @@
 import BlogPageContent from "@/components/BlogPageContent";
 import React, { Suspense } from "react";
 
-const page = () => {
+const Page = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <BlogPageContent />
@@ -9,4 +9,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -4,22 +4,24 @@ import { BlogCategory, BlogData, blogTagsData } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import Button from "./shared/Button";
 
 const BlogMenu = () => {
   return (
-    <div className="lg:w-[45%] space-y-6">
-      <BlogSearch />
-      <BlogCategories />
-      <RecentNews />
-      <BlogTags />
-      <div className="relative h-[380px] w-full">
-        <Image src={"/blog.png"} objectFit="cover" layout="fill" alt="Blog" />
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className="lg:w-[45%] space-y-6">
+        <BlogSearch />
+        <BlogCategories />
+        <RecentNews />
+        <BlogTags />
+        <div className="relative h-[380px] w-full">
+          <Image src={"/blog.png"} objectFit="cover" layout="fill" alt="Blog" />
+        </div>
+        <NewsLetter />
       </div>
-      <NewsLetter />
-    </div>
+    </Suspense>
   );
 };
 
