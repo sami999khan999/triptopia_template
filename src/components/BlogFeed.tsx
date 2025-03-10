@@ -1,5 +1,8 @@
+"use client";
+
 import { blogFeedData } from "@/lib/data";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const BlogFeed = () => {
@@ -33,9 +36,14 @@ interface BlogFeedType {
   authorImage: string;
 }
 const BlogFeedCard = (props: BlogFeedType) => {
+  const router = useRouter();
+
   return (
     <div className="w-full border border-gray-200 overflow-hidden rounded-xl">
-      <div className="h-[264px] relative">
+      <div
+        className="h-[264px] relative"
+        onClick={() => router.push(`/blog/${props.id}`)}
+      >
         <Image
           src={"/blog-feed.png"}
           layout="fill"
@@ -49,7 +57,10 @@ const BlogFeedCard = (props: BlogFeedType) => {
       <div className="p-6">
         <div className="space-y-2">
           <p className="text-sm text-primary">{props.type}</p>
-          <p className="text-2xl text-primary-foreground font-semibold line-clamp-2">
+          <p
+            className="text-2xl text-primary-foreground font-semibold line-clamp-2 cursor-pointer"
+            onClick={() => router.push(`/blog/${props.id}`)}
+          >
             {props.title}
           </p>
         </div>

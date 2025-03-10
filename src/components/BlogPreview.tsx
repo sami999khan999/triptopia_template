@@ -53,15 +53,15 @@ const BlogPreview = (blog: BlogType) => {
 
       <div className="border-x border-b border-primary-foreground/10 rounded-b-xl">
         <div className="p-6">
-          <h2 className="text-4xl font-semibold text-primary-foreground">
+          <h2 className="lg:text-4xl text-2xl font-semibold text-primary-foreground">
             {blog.title}
           </h2>
           <p className="line-clamp-3 text-primary-foreground/80 mt-4">
             {blog.sectionHeading.paragraphs[0]}
           </p>
         </div>
-        <div className="flex justify-between px-4 border-t border-muted-foreground/30 py-2">
-          <div className="flex items-center gap-5 text-primary-foreground/80 text-sm">
+        <div className="flex flex-col sm:flex-row sm:justify-between px-4 border-t border-muted-foreground/20 py-4">
+          <div className="flex gap-4 lg:justify-normal justify-between text-primary-foreground/80 text-sm">
             <div className="flex items-center gap-1">
               <SlCalender size={15} />
               <p>{blog.date}</p>
@@ -75,7 +75,8 @@ const BlogPreview = (blog: BlogType) => {
               <p>{blog.shares} Shares</p>
             </div>
           </div>
-          <Button>
+
+          <Button className="mt-3 sm:mt-0 w-full sm:w-auto">
             <Link href={`/blog/${blog.id}`}>Read More</Link>
           </Button>
         </div>

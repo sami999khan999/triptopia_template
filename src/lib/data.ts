@@ -1157,3 +1157,62 @@ export const blogTagsData = [
   "Greece",
   "Cambodia",
 ];
+
+export const blogCommentsData = [
+  {
+    id: 1,
+    name: "Alice Johnson",
+    image: "/blog.png",
+    date: "2025-03-11T14:30:00Z",
+    comment: "Great insights! This was really helpful.",
+  },
+  {
+    id: 2,
+    name: "Michael Smith",
+    image: "/blog.png",
+    date: "2025-03-10T09:15:00Z",
+    comment: "I love the way you explained this topic. Very detailed!",
+  },
+  {
+    id: 3,
+    name: "Sophia Martinez",
+    image: "/blog.png",
+    date: "2025-03-09T18:45:00Z",
+    comment: "Thanks for sharing! Looking forward to more posts.",
+  },
+  {
+    id: 4,
+    name: "Daniel Lee",
+    image: "/blog.png",
+    date: "2025-03-08T21:00:00Z",
+    comment: "Interesting perspective! I never thought about it this way.",
+  },
+  {
+    id: 5,
+    name: "Emma Brown",
+    image: "/blog.png",
+    date: "2025-03-07T12:20:00Z",
+    comment: "Loved the images you used. They really complement the content!",
+  },
+  {
+    id: 6,
+    name: "James Wilson",
+    image: "/blog.png",
+    date: "2025-03-06T08:05:00Z",
+    comment: "Well-written and easy to understand. Keep it up!",
+  },
+  {
+    id: 7,
+    name: "Olivia Taylor",
+    image: "/blog.png",
+    date: "2025-03-05T16:50:00Z",
+    comment: "This article answered all my questions. Thank you!",
+  },
+  {
+    id: 8,
+    name: "William Davis",
+    image: "/blog.png",
+    date: "2025-03-04T19:30:00Z",
+    comment: "I've bookmarked this for future reference. So useful!",
+  },
+];

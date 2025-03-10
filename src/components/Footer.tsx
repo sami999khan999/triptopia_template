@@ -37,13 +37,15 @@ const Footer = () => {
                 branding that stands out.
               </p>
             </div>
-            <div className="bg-foreground p-3 rounded-sm w-full flex">
+            <div className="bg-foreground p-2 rounded-sm w-full flex">
               <input
                 type="text"
                 placeholder="Enter your email"
                 className="text-primary-foreground w-full lg:pl-8 pl-2 outline-none"
               />
-              <Button className="bg-primary-foreground">Subscribe</Button>
+              <Button className="bg-primary-foreground text-xs lg:text-base">
+                Subscribe
+              </Button>
             </div>
           </div>
         </div>

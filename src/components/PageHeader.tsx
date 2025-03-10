@@ -22,6 +22,7 @@ const PageHeader = () => {
     <div>
       <div className="h-[50vh] relative">
         <Image
+          priority
           src={"/page-header.png"}
           layout="fill"
           objectFit="cover"

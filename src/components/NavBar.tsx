@@ -13,20 +13,23 @@ import { ChevronDown } from "lucide-react";
 const NavBar = () => {
   return (
     <nav className="hidden lg:block sticky top-0 z-50">
-      <div className="h-20 bg-gray-100/50 flex justify-center items-center backdrop-blur-md">
+      <div className="h-20 bg-gray-100/80 flex justify-center items-center backdrop-blur-md">
         <div className="wrapper flex justify-between items-center w-full">
           <Logo />
           <div className="flex  text-lg items-center">
             {NavLinkData.map((navItem) => (
               <DropdownMenu key={navItem.name}>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="hover:bg-gray-100">
-                    {navItem.name} <ChevronDown />
+                  <Button
+                    variant="ghost"
+                    className="text-base font-semibold text-primary-foreground/80 hover:outline-1 py-1 rounded-xs"
+                  >
+                    {navItem.name} <ChevronDown size={17} />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
                   align="start"
-                  className="bg-foreground/50 border-y-0 backdrop-blur-xl p-0 text-primary-foreground rounded-none border-x-4 border-x-primary-foreground/50"
+                  className="bg-foreground/80 border border-primary-foreground/40 backdrop-blur-xl p-0 text-primary-foreground rounded-none"
                 >
                   {navItem.items.map((item) => (
                     <DropdownMenuItem
@@ -42,7 +45,10 @@ const NavBar = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
             ))}
-            <Link href={"/"} className="hover:bg-background px-5 py-3">
+            <Link
+              href={"/"}
+              className="px-5 text-base font-semibold text-primary-foreground/80 hover:outline-2 py-1 rounded-xs"
+            >
               Contact
             </Link>
           </div>
