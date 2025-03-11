@@ -29,7 +29,7 @@ const PageHeader = () => {
           alt="Page Header"
         />
         <div className="relative flex flex-col items-center justify-center h-full gap-3 text-foreground/80 capitalize">
-          <p className="text-foreground text-5xl">{pathName}</p>
+          <p className="text-foreground text-5xl uppercase">{pathName}</p>
           <div className="flex text-lg gap-2">
             <Link href={"/"}>Home</Link>
             <p className="text-primary">•</p>

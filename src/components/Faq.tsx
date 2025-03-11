@@ -1,14 +1,16 @@
+"use client";
+
 import { faqData } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
 
-const Faq = () => {
+const Faq = ({ bgColor }: { bgColor?: string }) => {
   const [selectedFaq, setSelectedFaq] = useState(0);
 
   return (
-    <section id="faq" className=" bg-foreground">
+    <section id="faq" className={cn(" bg-foreground", bgColor && bgColor)}>
       <div className="wrapper py-[6rem] space-y-14">
         <div className="leading-tight ">
           <p className="title">FAQ</p>
@@ -24,11 +26,12 @@ const Faq = () => {
               <div
                 key={i}
                 className={cn(
-                  "bg-background text-primary-foreground/80 text-2xl px-8 py-6 font-semibold flex justify-between gap-5 cursor-pointer",
+                  "bg-background text-primary-foreground/80 text-xl lg:text-2xl px-8 py-6 font-semibold flex justify-between gap-5 cursor-pointer",
                   {
                     "border-b-6 border-secondary text-primary-foreground":
                       selectedFaq === i,
-                  }
+                  },
+                  bgColor ? "shadow-md" : ""
                 )}
                 onClick={() => setSelectedFaq(i)}
               >

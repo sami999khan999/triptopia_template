@@ -45,7 +45,7 @@ const BlogFeedCard = (props: BlogFeedType) => {
         onClick={() => router.push(`/blog/${props.id}`)}
       >
         <Image
-          src={"/blog-feed.png"}
+          src={props.image}
           layout="fill"
           objectFit="cover"
           alt={props.title}
